@@ -26,9 +26,9 @@ jobs:
       - name: Retrieve gas price data
         run: |
           # Retry 3 times
-          (echo "===== Attempt: 1 ====" && python gasprice.py) || \
-          (echo "===== Attempt: 2 ====" && python gasprice.py) || \
-          (echo "===== Attempt: 3 ====" && python gasprice.py) || \
+          (echo "===== Attempt: 1 ====" && python gasprice-ws.py) || \
+          (echo "===== Attempt: 2 ====" && python gasprice-ws.py) || \
+          (echo "===== Attempt: 3 ====" && python gasprice-ws.py) || \
           (echo "==== Crawler Failed ====" && exit 1)
 
       - name: Commit files
